@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -51,6 +52,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export const NavBar = () => {
+  const handleGoRoot = () => {
+    console.log('first');
+  };
   return (
     <Box sx={{ flexGrow: 1 }} component="nav">
       <AppBar position="static" elevation={2}>
@@ -63,13 +67,16 @@ export const NavBar = () => {
             sx={{ mr: 2 }}>
             <MenuIcon />
           </IconButton>
+
           <Typography
+            // href="/"
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-            MUI
+            Tours
           </Typography>
+
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
